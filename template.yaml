@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Serverless aplication for Chilean Cchool System.
+
+Resources:
+  Establecimientos:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: establecimiento.handler
+      Runtime: nodejs6.10
+      Environment:
+        Variables:
+          MONGODB_ATLAS_CLUSTER_URI: !Ref Establecimientos
+      Events:
+        ListNotes:
+          Type: Api
+          Properties:
+            Path: /establecimiento/{rbd}
+            Method: get
+
