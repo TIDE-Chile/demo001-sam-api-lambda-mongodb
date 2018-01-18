@@ -14,5 +14,7 @@ Formato de env.json
 }
 ```
 ##
-PACKAGE THE FILR
+PACKAGE THE FILE
+```
 $ sam package --template-file template.yaml --s3-bucket elm_sambucket --output-template-file package.yaml
+```
