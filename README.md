@@ -18,3 +18,8 @@ PACKAGE THE FILE
 ```
 $ sam package --template-file template.yaml --s3-bucket elm_sambucket --output-template-file package.yaml
 ```
+##
+DEPLOYMENT
+```
+$ sam deploy --template-file package.yaml --stack-name EducacionChile --capabilities CAPABILITY_IAM
+```
